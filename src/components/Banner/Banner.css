@@ -1,0 +1,30 @@
+.header{
+    position: fixed;
+    width: 100%;
+    padding: .8rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+  }
+
+.navbar a{
+    display: inline-flex;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-left: 2.6rem;
+    transition: .2s;
+  }
+  
+  .navbar a:hover{
+    color: var(--main-color);
+    transform: scale(1.2);
+  }
+  
+  @media (min-width: 1440px){
+    .header {
+      max-width: 1440px;
+    }
+  }
