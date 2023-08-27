@@ -1,7 +1,7 @@
 import './AboutLafoca.css'
 
 import { useEffect, useState } from 'react'
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -10,13 +10,16 @@ import BgLaranjaLafoca from '../../assets/img/sobre/bg-laranja.svg'
 import Girl from '../../assets/img/sobre/girl.svg'
 
 import { ReactComponent as IconVisao } from '../../assets/img/sobre/icon-visao.svg';
+import { ReactComponent as IconMissao } from '../../assets/img/sobre/icon-missao.svg';
+import { ReactComponent as IconPesquisa } from '../../assets/img/sobre/icon-linha_de_pesquisa.svg';
+import { ReactComponent as IconValores} from '../../assets/img/sobre/icon-valores.svg';
 
 
 export const AboutLafoca = () => {
     return (
         <section className='about section-content' id='sobre'>
-            <h2 className='about__heading'>SOBRE O <span>LAFOCA</span></h2>
-            <p>
+            <h2 className='global-title-black-orange'>SOBRE O <span>LAFOCA</span></h2>
+            <p className='about__paragraph'>
                 Fundado em 2017, o LAFocA é formado por alunos e professores, além de
                 parceiros de outras instituições de ensino e empresas do mercado de TI.
                 Nosso foco é o aluno, buscando contribuir para o seu desenvolvimento
@@ -28,6 +31,7 @@ export const AboutLafoca = () => {
                 <ContainerAboutLafoca />
                 <ContainerAboutLafocaAccordion />
             </div>
+            
         </section>
     )
 }
@@ -83,7 +87,7 @@ export const ContainerAboutLafocaAccordion = () => {
                 COMPROMISSOS <br />
                 QUE <span>DESENVOLVEMOS</span>
             </h2>
-            <p>
+            <p className='about__paragraph'>
                 Conheça os princípios que norteiam as atividades do laboratório e
                 garantem a excelência nos projetos e resultados obtidos.
             </p>
@@ -91,22 +95,43 @@ export const ContainerAboutLafocaAccordion = () => {
                 <Accordion
                     Icon={IconVisao}
                     title="VISÃO"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    text="Ser reconhecido como um grupo de pesquisa referência na
+                    formação de profissionais qualificados."
                 />
                 <Accordion
-                    Icon={IconVisao}
+                    Icon={IconMissao}
                     title="MISSÃO"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    text="Propiciar um ambiente adequado que permita desenvolver
+                    pesquisas de qualidade, contribuindo para o desenvolvimento dos
+                    alunos."
                 />
                 <Accordion
-                    Icon={IconVisao}
+                    Icon={IconPesquisa}
                     title="LINHA DE PESQUISA"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    text={
+                        <>
+                            
+                                • Engenharia de Software e Metodologias Ágeis<br /><br />
+                                • Interação Humano-Computador (IHC) e User eXperience(UX)<br /><br />
+                                • Jogos e Gameficação<br /><br />
+                                • Marketing Digital e Midias Sociais<br /><br />
+                                • Programação e Testes de Software
+                            
+                        </>}
                 />
                 <Accordion
-                    Icon={IconVisao}
+                    Icon={IconValores}
                     title="VALORES"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    text={
+                        <>
+                                <strong>Comunicação</strong> – Compartilhar informações, buscando transmitir conhecimento e valores.<br />
+                                <strong>Proatividade</strong> – Tomar iniciativa e decisões na realização das suas atividades.<br />
+                                <strong>Colaboração</strong> – Trabalhar ou cooperar com as atividades de uma ou mais pessoas do grupo.<br />
+                                <strong>Protagonismo</strong> – Aceitar os méritos e resultados da realização das suas atividades.<br />
+                                <strong>Comprometimento</strong> – Empenhar seus esforços e dedicação nas atividades das quais participa.<br />
+                                <strong>Pertencimento</strong> – Fazer parte de um grupo, se identificando com a linha de pesquisa.
+                           </>
+                    }
                 />
             </div>
         </div>
@@ -115,13 +140,13 @@ export const ContainerAboutLafocaAccordion = () => {
 
 export const Accordion = ({ title, text, Icon }) => {
     const [open, setOpen] = useState(false);
-    const [iconOpen, setIconOpen] = useState(false); // Novo estado para controlar o ícone
+    const [iconOpen, setIconOpen] = useState(true); // Novo estado para controlar o ícone
 
     //toggle accordion function
     let toggleHandler = (e) => {
         //switch state
         setOpen(!open);
-        setIconOpen(!iconOpen); // Alternar o estado do ícone quando o acordeão é aberto/fechado
+        // setIconOpen(!iconOpen); // Alternar o estado do ícone quando o acordeão é aberto/fechado
 
     };
 
@@ -135,8 +160,9 @@ export const Accordion = ({ title, text, Icon }) => {
     //open animation with react spring
 
     const openAnimation = useSpring({
-        from: { opacity: "0", maxHeight: "25px" },
-        to: { opacity: "1", maxHeight: open ? "200px" : "25px" },
+        from: { opacity: "0", maxHeight: "25px", },
+        to: { opacity: "1", maxHeight: open ? "265px" : "77px" },
+        onRest: () => { setIconOpen(!iconOpen) },
         config: { duration: "300" }
     });
 
@@ -150,21 +176,39 @@ export const Accordion = ({ title, text, Icon }) => {
             transform: open ? "rotate(180deg)" : "rotate(0deg)",
             // color: open ? "#10d6f5" : "#fff"
         },
+
         config: { duration: "120" }
     });
 
+    const borderAn = useSpring({
+        from: {
+            // borderBottomWidth: '1px',
+            borderBottomStyle: 'none',
+            // borderBottomColor: 'rgba(101, 101, 101, 0.5)',
+        },
+        to: {
+            borderBottomWidth: '1px',
+            borderBottomStyle: open ? 'solid' : 'none',
+            borderBottomColor: 'rgba(101, 101, 101, 0.5)',
+            paddingBottom: '7px'
+        },
+        config: { duration: "300" }
+    })
+
+    // const visibleIcon = !(iconAnimation.transform.animation.to == "rotate(180deg)")
+
     return (
         <animated.div className="accordion__item" style={openAnimation}>
-            <div className="accordion__header" onClick={toggleHandler}>
+            <animated.div className="accordion__header" style={borderAn} onClick={toggleHandler}>
                 <Icon />
                 <h4 style={styles.accordionTitle}>{title}</h4>
                 <animated.i style={iconAnimation}>
                     {/* <AddIcon /> */}
-                    {iconOpen ? <RemoveIcon /> : <AddIcon />} {/* Use um ícone diferente se o acordeão estiver aberto */}
+                    {iconOpen ? <RemoveIcon style={{ fontSize: 30 }} className='iconAccordion' /> : <AddIcon style={{ fontSize: 30 }} className='iconAccordion' />} {/* Use um ícone diferente se o acordeão estiver aberto */}
 
                 </animated.i>
-            </div>
-            <p className="accordion__content">{text}</p>
+            </animated.div>
+            <p className="accordion__content" style={{ whiteSpace: 'pre-line' }}>{text}</p>
         </animated.div>
     );
 }

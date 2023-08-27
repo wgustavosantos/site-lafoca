@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Banner from "./components/Banner";
 import {AboutLafoca} from "./components/AboutLafoca";
+import { OurTeam } from "./components/OurTeam";
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
 function HomePage() {
   return (
     <>
+   
     <div className="content-body">
-      <Banner />
+       <Banner />
       <AboutLafoca />
+      <OurTeam/>
     </div>
       
     </>
