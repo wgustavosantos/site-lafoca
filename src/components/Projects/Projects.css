@@ -1,0 +1,140 @@
+.project__card {
+    display: inline-block;
+    border-radius: 20px;
+    margin: 0 1rem;
+    background-color: var(--color-white);
+    transition: transform .4s;
+}
+.project__card img{
+    /* max-width: 60%; */
+    width: 100%;
+    height: auto;
+}
+
+.project__card-header {
+    display: flex;
+    font-size: .75rem;
+    margin-top: -65px;
+    margin-bottom: 11px;
+}
+
+.project__card-header > strong, .project__card-header > p {
+    margin-right: 0.8125rem;
+}
+
+.project__card-text {
+    padding: 2.25rem 1.4375rem;
+    max-width: 379px;
+    min-height: 265px;
+}
+
+.project__date {
+    position: relative;
+    right: -277px;
+    top: -68px;
+    background-color: var(--main-color);
+    padding: 1.5rem 0.5rem;
+    margin-left: auto;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.project__card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.project__card-content > h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project__card-content > p, .project__card-header > p {
+    color: var(--text-color);
+    word-wrap: break-word;
+}
+
+/* Seletor específico para estilizar a margem superior do alice-carousel__stage */
+.carousel-container .alice-carousel__stage {
+    margin-top: 90px;
+}
+
+.project__card:hover {
+    box-shadow: -1px 11px 20px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px);
+    
+}
+
+/* styles.css */
+/* styles.css */
+/* .custom-prev-button {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-next-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.custom-button {
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-container .alice-carousel__dots-item:not(.__custom).__active {
+    background-color: var(--main-color)
+}
+
+.carousel-container .alice-carousel__dots-item:not(.__custom) {
+    width: 45px;
+    height: 4px;
+    border-radius: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0,0, 0.3);
+}
+.carousel-container .alice-carousel__stage-item{
+    width: 300px;
+}
+
+.circular-button {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .circular-button:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    animation: moveShadow 0.5s infinite alternate;
+    pointer-events: none;
+    transform: translate(var(--x-offset, 0px), var(--y-offset, 0px));
+  }
+  
+  @keyframes moveShadow {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(5px, 5px);
+    }
+  }

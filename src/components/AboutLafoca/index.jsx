@@ -19,7 +19,7 @@ export const AboutLafoca = () => {
     return (
         <section className='about section-content' id='sobre'>
             <h2 className='global-title-black-orange'>SOBRE O <span>LAFOCA</span></h2>
-            <p className='about__paragraph'>
+            <p className='global-paragraph'>
                 Fundado em 2017, o LAFocA é formado por alunos e professores, além de
                 parceiros de outras instituições de ensino e empresas do mercado de TI.
                 Nosso foco é o aluno, buscando contribuir para o seu desenvolvimento
@@ -42,7 +42,7 @@ export const ContainerAboutLafoca = () => {
         ScrollReveal({
             reset: true,
             distance: '8rem',
-            duration: 4000
+            duration: 2000
         });
 
         // Configurações de animação para elementos específicos
@@ -87,7 +87,7 @@ export const ContainerAboutLafocaAccordion = () => {
                 COMPROMISSOS <br />
                 QUE <span>DESENVOLVEMOS</span>
             </h2>
-            <p className='about__paragraph'>
+            <p className='global-paragraph'>
                 Conheça os princípios que norteiam as atividades do laboratório e
                 garantem a excelência nos projetos e resultados obtidos.
             </p>
@@ -161,7 +161,7 @@ export const Accordion = ({ title, text, Icon }) => {
 
     const openAnimation = useSpring({
         from: { opacity: "0", maxHeight: "25px", },
-        to: { opacity: "1", maxHeight: open ? "265px" : "77px" },
+        to: { opacity: "1", maxHeight: open ? "310px" : "77px" },
         onRest: () => { setIconOpen(!iconOpen) },
         config: { duration: "300" }
     });

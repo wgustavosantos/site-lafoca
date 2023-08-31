@@ -20,7 +20,7 @@ body {
 
 .content-body {
   margin: 0 auto;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   /* padding: 0 8%; */
 }
 
@@ -28,6 +28,7 @@ body {
 .section-content {
   /* min-height: 100vh;  */
   padding: 5rem 5rem;
+  margin: 2rem 0;
 }
 
 span {
@@ -35,18 +36,30 @@ span {
 }
 
 :root{
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-black-results: #222;
   --bg-color: #F6F7FB;
   --main-color: #EE972D;
   --title-color:#222222;
   --text-color: #222222A6;
   --bg-accordion: #EBEBEB;
+  --button-know-more: #222222;
 }
 
 .global-title-black-orange {
   text-align: center;
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+}
+
+.global-paragraph {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 2.2rem;
 }
 
 /* html{

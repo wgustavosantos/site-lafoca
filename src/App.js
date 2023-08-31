@@ -2,6 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Banner from "./components/Banner";
 import {AboutLafoca} from "./components/AboutLafoca";
 import { OurTeam } from "./components/OurTeam";
+import Projects from "./components/Projects";
+import { Results } from "./components/Results";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -19,10 +22,13 @@ function HomePage() {
    
     <div className="content-body">
        <Banner />
-      <AboutLafoca />
-      <OurTeam/>
-    </div>
       
+    </div>
+        <AboutLafoca />
+        <OurTeam/>
+        <Projects/>
+        <Results/>
+        <Footer/>
     </>
 
   );

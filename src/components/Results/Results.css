@@ -1,0 +1,89 @@
+.results {
+    background-color: var(--color-black-results);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 7rem;
+    /*Sobrescrevendo padding de section-content*/
+}
+
+.results-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.results-banner>svg {
+    position: relative;
+    top: -55px;
+}
+
+.results-banner>img {
+    position: relative;
+    bottom: -75px;
+    width: 100%;
+}
+
+.results__title {
+    font-weight: 800;
+    font-size: 2.625rem;
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.metrics {
+    white-space: nowrap;
+    padding: 0.5rem;
+    margin: 0 1.5rem;
+    text-align: center;
+}
+
+.results__metrics {
+    display: flex;
+}
+
+.metrics__number {
+    color: var(--main-color);
+    font-size: 3.125rem;
+    font-weight: 800;
+}
+
+.projects__card {
+    position: relative;
+    display: inline-block;
+    margin: 0 3rem;
+    transition: transform .4s;
+}
+
+.card-content {
+    position: absolute;
+    top: -3.0rem;
+    left: 0;
+    margin-left: 1.625rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 0.625rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: center; */
+    color: white;
+    text-align: left;
+    font-size: 1.275rem;
+}
+
+.projects__card strong {
+    font-size: 0.75rem;
+}
+.results__projects {
+    margin: 6rem 0;
+    text-align: center;
+}
+
+.projects__card:hover {
+    transform: translateY(-50px);
+    /* Desloca a div para cima ao passar o mouse */
+}
