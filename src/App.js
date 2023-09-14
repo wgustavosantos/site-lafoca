@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Banner from "./components/Banner";
+import Banner from "./components/Header";
 import {AboutLafoca} from "./components/AboutLafoca";
 import { OurTeam } from "./components/OurTeam";
 import Projects from "./components/Projects";
@@ -20,10 +20,8 @@ function HomePage() {
   return (
     <>
    
-    <div className="content-body">
+    {/* <div className="content-body"></div> */}
        <Banner />
-      
-    </div>
         <AboutLafoca />
         <OurTeam/>
         <Projects/>

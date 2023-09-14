@@ -17,7 +17,7 @@ import { ReactComponent as IconValores} from '../../assets/img/sobre/icon-valore
 
 export const AboutLafoca = () => {
     return (
-        <section className='about section-content' id='sobre'>
+        <section className='about' id='sobre'>
             <h2 className='global-title-black-orange'>SOBRE O <span>LAFOCA</span></h2>
             <p className='global-paragraph'>
                 Fundado em 2017, o LAFocA é formado por alunos e professores, além de
@@ -63,7 +63,7 @@ export const ContainerAboutLafoca = () => {
     }, []);
 
     return (
-        <div className='ContainerAboutLafocaImg'>
+        <div className='containerAboutLafocaImg'>
             <img src={BgLaranjaLafoca} className='bgLaranja' />
             <img src={Girl} className='bgGirl' />
         </div>

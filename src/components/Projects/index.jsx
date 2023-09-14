@@ -10,12 +10,9 @@ import { ReactComponent as ArrowLeft } from '../../assets/img/team/arrow-left.sv
 
 export default function Projects() {
     return (
-        <section className='projects section-content'>
+        <section className='projects'>
             <h2 className='global-title-black-orange'>NOSSOS <span>PROJETOS</span></h2>
             <p className='global-paragraph'>Conheça os projetos que desenvolvemos em nosso grupo, na forma de extensão universitária, pesquisas acadêmicas e parcerias com o mercado.</p>
-            {/* <Carousel/> */}
-            {/* <Card />
-            <Card /> */}
             <div className='carousel-container'>
                 <Gallery />
             </div>
@@ -70,12 +67,9 @@ const responsive = {
     768: {
         items: 2, // Mostrar 3 itens no carousel para telas maiores ou igual a 768px
     },
-    1000: {
+    1200: {
         items: 3, // Mostrar 3 itens no carousel para telas maiores ou igual a 768px
-    },
-    1440: {
-      items: 4, // Mostrar 3 itens no carousel para telas maiores ou igual a 768px
-  },
+    }
 };
 
 const Gallery = () => {

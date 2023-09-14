@@ -27,15 +27,12 @@
 } */
 
 .about-container {
-  position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 10rem;
-  width: 100%;
-  max-width: 1440px;
+
 }
 
-.ContainerAboutLafocaImg {
+.containerAboutLafocaImg {
   position: absolute;
   left: 0;
 }

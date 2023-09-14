@@ -1,20 +1,13 @@
 /* styles.css */
 .card {
-    position: relative;
-    display: inline;
-    /* margin: 50px 12px; */
-    /* transition: transform 5s */
-    /*  width: 200px;
-  height: 300px; */
-    /* width: 100%; */
-    /* height: 100%; */
-    /* overflow: hidden; */
-    /* border: 1px solid #ccc; */
+    /* position: relative; */
+    /* display: inline; */
+    transition: transform 5s;
 
 }
 
 .img {
-    width: 380px;
+    width: 23rem;
     transition: transform .4s;
     /* height: 100%; */
     /* object-fit: cover; */
@@ -100,6 +93,10 @@
     box-shadow: -1px 12px 12px 1px rgba(0, 0, 0, 0.1);
 }
 
+.carousel-container {
+    /* margin: 0 10%; */
+}
+
 .carousel-container .alice-carousel__dots-item:not(.__custom).__active {
     background-color: var(--main-color)
 }
@@ -112,6 +109,21 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.carousel-container .alice-carousel__stage-item {
-    width: 300px;
+.carousel-container {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+@media (max-width: 2300px) {
+    .carousel-container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    .carousel-container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }

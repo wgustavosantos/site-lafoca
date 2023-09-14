@@ -12,8 +12,7 @@ import { NavLink } from 'react-router-dom';
 export const Results = () => {
     return (
         <>
-
-            <section className='results section-content'>
+            <section className='results'>
                 <div>
                     <h2 className='results__title'>RESULTADOS DE PESQUISAS</h2>
                     <div className='results__metrics'>

@@ -5,7 +5,7 @@ import { ReactComponent as Instagram } from '../../assets/img/footer/instagram.s
 
 export const Footer = () => {
     return (
-        <footer className='footer section-content'>
+        <footer className='footer'>
             <div className='footer-main'>
                 <div className='footer-logo'>
                     <img src={LafocaLogoFooter} />
@@ -37,7 +37,6 @@ export const Footer = () => {
                     <Facebook className='icon-ig' />
                 </div>
             </div>
-
         </footer>
     )
 }

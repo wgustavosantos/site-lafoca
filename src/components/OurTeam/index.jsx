@@ -10,7 +10,7 @@ import { ReactComponent as ArrowLeft } from '../../assets/img/team/arrow-left.sv
 
 export const OurTeam = () => {
     return (
-        <section className='team section-content' id='equipe'>
+        <section className='team' id='equipe'>
             <h2 className='global-title-black-orange'>NOSSA <span>EQUIPE</span></h2>
             <p className='global-paragraph'>Conheça a equipe que compõe o nosso laboratório de pesquisa e
                 veja um pouco mais sobre  cada um deles e como eles contribuem para o sucesso das nossas atividades.
@@ -80,11 +80,8 @@ const responsive = {
         items: 2, // Mostrar 3 itens no carousel para telas maiores ou igual a 768px
     },
     1000: {
-        items: 3, // Mostrar 3 itens no carousel para telas maiores ou igual a 768px
-    },
-    1440: {
-      items: 4, // Mostrar 3 itens no carousel para telas maiores ou igual a 768px
-  },
+        items: 3// Mostrar 3 itens no carousel para telas maiores ou igual a 768px
+    }
 };
 
 const Gallery = () => {

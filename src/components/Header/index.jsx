@@ -1,14 +1,14 @@
-import './Banner.css'
+import './BannerLogoLafoca.css';
+import './Header.css'
 import { NavLink } from "react-router-dom";
 import  {  NavHashLink  }  from  'react-router-hash-link' ;
 import { ReactComponent as LogoLafoca } from '../../assets/img/Logo LaFocA.svg';
-import BannerLogoLafoca from '../BannerLogoLafoca';
 
+export default function Header () {
 
-export default function Banner() {
     return (
-        <>
-            <header className='header'>
+        <section className='bannerLogoLafoca'>
+             <header className='header'>
                 <NavLink>
                     <LogoLafoca />
                 </NavLink>
@@ -27,8 +27,6 @@ export default function Banner() {
                     </NavHashLink>
                 </nav>
             </header>
-            <BannerLogoLafoca />
-        </>
-
+        </section>
     )
 }
