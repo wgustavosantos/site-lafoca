@@ -1,0 +1,43 @@
+.novo-estudante {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.novo-estudante__header {
+  display: flex;
+  align-items: center;
+}
+
+.novo-estudante__header > h1 {
+  margin-left: 50px;
+}
+
+.novo-estudante form {
+  margin-top: 20px;
+}
+
+.novo-estudante input,
+.novo-estudante textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.novo-estudante label {
+  font-weight: bold;
+}
+
+.novo-estudante button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.novo-estudante button:hover {
+  background-color: #333;
+}
